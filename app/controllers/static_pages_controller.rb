@@ -1,4 +1,3 @@
 class StaticPagesController < ApplicationController
-  def root
-  end
+  before_action :require_user!, except: [:welcome]
 end

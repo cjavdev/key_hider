@@ -1,13 +1,13 @@
-window.KeyHider = {
+window.KeyHider = window.App = {
   Models: {},
   Collections: {},
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    var router = new App.Router({
+      $rootEl: $('#main')
+    });
+    Backbone.history.start();
   }
 };
 
-$(document).ready(function(){
-  KeyHider.initialize();
-});
